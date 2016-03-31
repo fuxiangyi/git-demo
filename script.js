@@ -109,8 +109,6 @@ function drawChartForLens(cameraChart, data, tip) {
           .append("rect");
 
         cameraChartBars.classed("cameraBar", true)
-          .classed("canonBar", function(d) { return true; })
-          .classed("nikonBar", function(d) { return false; })
           .attr("x", function(d, i) { return scaleX(d.lens); })
           .attr("y", function(d) { return h+margin.t; })
           .attr("width", function(d) { return w/data.length - 2; })
